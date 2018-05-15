@@ -5,24 +5,116 @@
     <title>Teste</title>
     <meta name="description" content="Exemplo mdl">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="./mdl/material.min.css">
     <script src="./mdl/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Temporario -->
+    <style type="text/css">
+        /*.trans {
+            background: url(img/bg1.jpg) center  / cover; 
+        }*/
+
+        .mdl-cell {
+            background-color: #CCC;
+        }
+        
+    </style>
+
 </head>
 <body>
-<h1> Título</h1>
-<!-- Accent-colored raised button with ripple -->
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-  Button
-</button>
+        <!-- mdl-layout--fixed-drawer -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header trans">
+        <!-- Gaveta -->
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Menu Gaveta</span>
+            <nav class="mdl-navigation">
+                    <a href="#" class="mdl-navigation__link">Grid</a>
+                    <a href="#" class="mdl-navigation__link">Link 1</a>
+                    <a href="#" class="mdl-navigation__link">Link 2</a>
+            </nav>
+        </div>
 
+        <!-- Cabecalho -->
+            <!-- mdl-layout__header--transparent -->
+        <header class="mdl-layout__header ">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title">Título</span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation">
+                    <a href="#" class="mdl-navigation__link">Link 0</a>
+                    <a href="#" class="mdl-navigation__link">Link 1</a>
+                    <a href="#" class="mdl-navigation__link">Link 2</a>
+                </nav>
+               
+            </div>
+        </header>
 
-    <!-- Colored FAB button -->
-<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
-  <i class="material-icons">add</i>
-</button>
+        <!-- Conteudo -->
+        <main class="mdl-layout__content">
+            <!-- Tabs -->
+            <div class="mdl-tabs mdl-js-tabs">
+                <!-- Tabs bar -->
+                <div class="mdl-tabs__tab-bar">
+                    <a href="#tab0-panel" class="mdl-tabs__tab is-active">Grids</a>
+                    <a href="#tab1-panel" class="mdl-tabs__tab">Tab 1</a>
+                    <a href="#tab2-panel" class="mdl-tabs__tab">Tab 2</a>
+                </div>
 
+                <!-- Tabs panel -->
+                <div class="mdl-tabs__panel is-active" id="tab0-panel">
+                    <h5>Grid 12 colunas</h5>
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--1-col">1</div>
+                        <div class="mdl-cell mdl-cell--1-col">1</div>
+                        <div class="mdl-cell mdl-cell--1-col">1</div>
+                        <div class="mdl-cell mdl-cell--1-col">1</div>
+                        <div class="mdl-cell mdl-cell--1-col">1</div>
+                        <div class="mdl-cell mdl-cell--1-col">1</div>
+                        <div class="mdl-cell mdl-cell--1-col">1</div>
+                        <div class="mdl-cell mdl-cell--1-col">1</div>
+                        <div class="mdl-cell mdl-cell--1-col">1</div>
+                        <div class="mdl-cell mdl-cell--1-col">1</div>
+                        <div class="mdl-cell mdl-cell--1-col">1</div>
+                        <div class="mdl-cell mdl-cell--1-col">1</div>
+                    </div>
 
+                    <h5>Grid 3 colunas</h5>
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--4-col">4
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col">4</div>
+                        <div class="mdl-cell mdl-cell--4-col">4</div>
+                    </div>
+
+                    <h5>Grid 2 colunas</h5>
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--8-col">8</div>
+                        <div class="mdl-cell mdl-cell--4-col">4</div>
+                    </div>
+
+                    <h5>Grid 3 colunas</h5>
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">6 (8 tablet)</div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet">4 (6 tablet)</div>
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">2 (4 phone)</div>
+                    </div>
+
+                    <h5>Grid 3 colunas</h5>
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col">6</div>
+                        <div class="mdl-cell mdl-cell--4-col">4</div>
+                        <div class="mdl-cell mdl-cell--2-col">2</div>
+                    </div>
+                </div>
+
+                <div class="mdl-tabs__panel" id="tab1-panel">
+                    <h3>Panel 1</h3>
+                </div>
+                <div class="mdl-tabs__panel" id="tab2-panel">
+                    <h3>Panel 2</h3>
+                </div>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
