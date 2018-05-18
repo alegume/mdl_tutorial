@@ -5,7 +5,8 @@
     <title>Teste</title>
     <meta name="description" content="Exemplo mdl">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./mdl/material.min.css">
+    <!-- <link rel="stylesheet" href="./mdl/material.min.css"> -->
+     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-orange.min.css" /> 
     <script src="./mdl/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Temporario -->
@@ -18,13 +19,57 @@
             background-color: #CCC;
         }
 
+        .mdl-cell #card {
+            background-color: #FFF;
+        }
+
         .add {
-            position: absolute;
+            position: fixed;
             right: 16px;
-            bottom: 16px;
+            bottom: 168px;
             z-index: 998;
         }
-        
+
+        @media screen and (max-width: 520px) {
+            .esconde-menu {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 521px) {
+            .mostra-menu {
+                display: none;
+            }
+        }
+
+        .md-18 {
+            font-size: 18px;
+        }
+
+        .md-22 {
+            font-size: 22px;
+        }
+
+        .md-30 {
+            font-size: 30px;
+        }
+
+        .red {color: red;}
+
+        .mussum {
+            width: 321px;
+        }
+
+        .mussum > .mdl-card__title {
+            color: #fff;
+            height: 150px;
+            background: url('https://i0.wp.com/www.bebidaexpressblog.com.br/wp-content/uploads/2013/11/mussum1.png') center / cover;
+        }
+
+        .mdl-card__menu {
+            color: #FFF;
+        }
+
     </style>
 
 </head>
@@ -35,9 +80,15 @@
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Menu Gaveta</span>
             <nav class="mdl-navigation">
-                    <a href="#" class="mdl-navigation__link">Grid</a>
-                    <a href="#" class="mdl-navigation__link">Link 1</a>
-                    <a href="#" class="mdl-navigation__link">Link 2</a>
+                <div class="mostra-menu">
+                    <a href="#" class="mdl-navigation__link"><span class="mdl-badge" data-badge="4">Notícias</span></a>
+                    <a href="#" class="mdl-navigation__link"><span class="mdl-badge mdl-badge--no-background" data-badge="&hearts;">Reacts</span></a>
+                    <a href="#" class="mdl-navigation__link">Contato</a>
+                    <hr />
+                </div>
+                <a href="#" class="mdl-navigation__link">Link 0</span></a>
+                <a href="#" class="mdl-navigation__link">Link 1</a>
+                <a href="#" class="mdl-navigation__link">Link 2</a>
             </nav>
         </div>
 
@@ -45,12 +96,20 @@
             <!-- mdl-layout__header--transparent -->
         <header class="mdl-layout__header ">
             <div class="mdl-layout__header-row">
-                <span class="mdl-layout-title">Título</span>
+                <span class="mdl-layout-title">Mussum Ipsum</span>
                 <div class="mdl-layout-spacer"></div>
-                <nav class="mdl-navigation">
-                    <a href="#" class="mdl-navigation__link">Link 0</a>
-                    <a href="#" class="mdl-navigation__link">Link 1</a>
-                    <a href="#" class="mdl-navigation__link">Link 2</a>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                    <label for="pesquisa" class="mdl-button mdl-js-button mdl-button--icon">
+                        <i class="material-icons">search</i>
+                    </label>
+                    <div class="mdl-textfield__expandable-holder">
+                        <input type="text" id="pesquisa" class="mdl-textfield__input">                  
+                    </div>
+                </div>
+                <nav class="mdl-navigation esconde-menu">
+                    <a href="#" class="mdl-navigation__link"><span class="mdl-badge" data-badge="4">Notícias</span></a>
+                    <a href="#" class="mdl-navigation__link"><span class="mdl-badge mdl-badge--no-background" data-badge="&hearts;">Reacts</span></a>
+                    <a href="#" class="mdl-navigation__link">Contato</a>
                 </nav>
                
             </div>
@@ -62,13 +121,13 @@
             <div class="mdl-tabs mdl-js-tabs">
                 <!-- Tabs bar -->
                 <div class="mdl-tabs__tab-bar">
-                    <a href="#tab0-panel" class="mdl-tabs__tab is-active">Grids</a>
-                    <a href="#tab1-panel" class="mdl-tabs__tab">Tab 1</a>
-                    <a href="#tab2-panel" class="mdl-tabs__tab">Tab 2</a>
+                    <a href="#tab0-panel" class="mdl-tabs__tab">Grids</a>
+                    <a href="#tab1-panel" class="mdl-tabs__tab is-active">Misc</a>
+                    <a href="#tab2-panel" class="mdl-tabs__tab">Tabelas</a>
                 </div>
 
                 <!-- Tabs panel -->
-                <div class="mdl-tabs__panel is-active" id="tab0-panel">
+                <div class="mdl-tabs__panel" id="tab0-panel">
                     <h5>Grid 12 colunas</h5>
                     <div class="mdl-grid">
                         <div class="mdl-cell mdl-cell--1-col">1</div>
@@ -114,21 +173,225 @@
                     </div>
                 </div>
 
-                <div class="mdl-tabs__panel" id="tab1-panel">
-                    <h3>Panel 1</h3>
+                <!-- Panel 1 -->
+                <div class="mdl-tabs__panel is-active" id="tab1-panel">
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--4-col cel">
+                            <h4>Ícones</h4>
+                            <!-- google.com/design/icons -->
+                            <div class="material-icons md-18 red">alarm_off</div>
+                            <i class="material-icons md-22">done_all</i>
+                            <span class="material-icons md-30 mdl-badge" data-badge="2">thumb_up</span>
+
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <label class="mdl-textfield__label" for="user">Usuário</label>
+                                <input class="mdl-textfield__input" type="text" id="user" pattern="[a-z]*"></input>
+                                <spam class="mdl-textfield__error">Apenas letras</spam>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <label class="mdl-textfield__label" for="texto">Texto</label>
+                                <textarea class="mdl-textfield__input" type="text" id="texto"></textarea>
+                            </div>
+
+
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col cel">
+                            <h4>Botões</h4>
+                            <button class="mdl-button mdl-js-button">Botão</button>
+                            <button class="mdl-button mdl-js-button mdl-button--primary">Primario</button>
+                            <button class="mdl-button mdl-js-button mdl-button--accent">Secundario</button>
+                            <button class="mdl-button mdl-js-button mdl-button--raised">Efeito</button>
+                            <button class="mdl-button mdl-js-button mdl-button--accent mdl-button--fab">
+                                <i class="material-icons">add</i>
+                            </button>
+                            <button class="mdl-button mdl-js-button mdl-button--primary mdl-button--raised mdl-button--fab mdl-button--mini-fab">
+                                <i class="material-icons">remove</i>
+                            </button>
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect">Efeito</button>
+                            <button class="mdl-button mdl-js-button" disabled>Botão</button>
+                            <button class="mdl-button mdl-js-button mdl-button--icon">
+                                <span class="material-icons">thumb_up</span>
+                            </button>
+                            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent mdl-js-ripple-effect">
+                                <span class="material-icons">thumb_up</span>
+                            </button>
+                            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary">
+                                <span class="material-icons">thumb_up</span>
+                            </button>
+                            <br /><br />
+                        </div>
+                        <div class="mdl-cell--4-col">
+                            <div class="mdl-card mdl-shadow--2dp mussum">
+                                <div class="mdl-card__title">
+                                    <h2 class="mdl-card__title-text">Cards Ipsum</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    Mussum Ipsum, cacilds vidis litro abertis. Aenean aliquam molestie leo, vitae iaculis nisl. Cevadis im ampola pa arma uma pindureta. In elementis mé pra quem é amistosis quis leo. Atirei o pau no gatis, per gatis num morreus. 
+                                </div>
+                                <div class="mdl-card--border mdl-card__actions">
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Pindureta</button>
+                                    <div class="mdl-card__menu">
+                                        <button class="mdl-button mdl-js-button mdl-button mdl-js-ripple-effect mdl-button--raised mdl-button--icon">
+                                            <i class="material-icons">share</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Panel 2 -->
                 <div class="mdl-tabs__panel" id="tab2-panel">
-                    <h3>Panel 2</h3>
+                    <h3>Tabelas</h3>
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-cell--4-col">
+                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--4dp mdl-data-table--selectable">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th class="mdl-data-table__cell--non-numeric">Nome</th>
+                                        <th>Idade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Didi Mocó Sonrisal Colesterol Novalgino Mufumbbo</td>
+                                        <td>23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Dedé (Galã da Periferia)</td>
+                                        <td>25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Mussum (cacildis)</td>
+                                        <td>32</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Zacarias (7 Lagoas / MG)</td>
+                                        <td>38</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
                 </div>
             </div>
             <!-- Exemplo de botao -->
-            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored add">
+<!--             <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored add">
                 <i class="material-icons">add</i>
-            </button>
+            </button> 0-->
         </main>
 
-        <footer class="mdl-mini-footer">
-            
+        <!-- Mini footer -->
+<!--         <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer--left-section">
+                <span class="mdl-logo">Links</span>
+                <ul class="mdl-mini-footer--link-list">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </div>
+            <div class="mdl-mini-footer--right-section">
+                <span class="mdl-logo">Canais</span>
+                <ul class="mdl-mini-footer--link-list">
+                    <li><a href="#">Youtube</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagran</a></li>
+                </ul>
+            </div>
+        </footer> -->
+
+        <!-- Mega footer -->
+        <footer class="mdl-mega-footer">
+            <!--
+            <div class="mdl-mega-footer--top-section">
+                <div class="mdl-mega-footer--drop-down-section">
+                    <input type="checkbox" class="mdl-mega-footer--heading-checkbox" checked>
+                    <h1 class="mdl-mega-footer--heading">Tutorial</h1>
+                    <ul class="mdl-mega-footer--link-list">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                    </ul>
+                </div>
+                <div class="mdl-mega-footer--drop-down-section">
+                    <input type="checkbox" class="mdl-mega-footer--heading-checkbox" checked>
+                    <h1 class="mdl-mega-footer--heading">Tutorial</h1>
+                    <ul class="mdl-mega-footer--link-list">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                    </ul>
+                </div>
+                <div class="mdl-mega-footer--drop-down-section">
+                    <input type="checkbox" class="mdl-mega-footer--heading-checkbox" checked>
+                    <h1 class="mdl-mega-footer--heading">Tutorial</h1>
+                    <ul class="mdl-mega-footer--link-list">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                    </ul>
+                </div>
+                <div class="mdl-mega-footer--drop-down-section">
+                    <input type="checkbox" class="mdl-mega-footer--heading-checkbox" checked>
+                    <h1 class="mdl-mega-footer--heading">Tutorial</h1>
+                    <ul class="mdl-mega-footer--link-list">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                    </ul>
+                </div>
+            </div> 
+
+            <div class="mdl-mega-footer--bottom-section">
+                <div class="mdl-mega-footer--drop-down-section">
+                    <input type="checkbox" class="mdl-mega-footer--heading-checkbox" checked>
+                    <h1 class="mdl-mega-footer--heading">Tutorial</h1>
+                    <ul class="mdl-mega-footer--link-list">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                    </ul>
+                </div>
+                <div class="mdl-mega-footer--drop-down-section">
+                    <input type="checkbox" class="mdl-mega-footer--heading-checkbox" checked>
+                    <h1 class="mdl-mega-footer--heading">Tutorial</h1>
+                    <ul class="mdl-mega-footer--link-list">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                    </ul>
+                </div>
+                <div class="mdl-mega-footer--drop-down-section">
+                    <input type="checkbox" class="mdl-mega-footer--heading-checkbox" checked>
+                    <h1 class="mdl-mega-footer--heading">Tutorial</h1>
+                    <ul class="mdl-mega-footer--link-list">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                    </ul>
+                </div>
+                <div class="mdl-mega-footer--drop-down-section">
+                    <input type="checkbox" class="mdl-mega-footer--heading-checkbox" checked>
+                    <h1 class="mdl-mega-footer--heading">Tutorial</h1>
+                    <ul class="mdl-mega-footer--link-list">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        -->
+
         </footer>
 
     </div>
