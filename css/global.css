@@ -1,0 +1,98 @@
+/*.trans {
+    background: url(img/bg1.jpg) center  / cover; 
+}*/
+
+.mdl-cell {
+    background-color: #CCC;
+}
+
+.mdl-cell #card {
+    background-color: #FFF;
+}
+
+@media screen and (max-width: 520px) {
+    .esconde-menu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 521px) {
+    .mostra-menu {
+        display: none;
+    }
+}
+
+.md-18 {
+    font-size: 18px;
+}
+
+.md-22 {
+    font-size: 22px;
+}
+
+.md-30 {
+    font-size: 30px;
+}
+
+.red {color: red;}
+
+.mussum {
+    width: 321px;
+}
+
+.mussum > .mdl-card__title {
+    color: #FFF;
+    height: 150px;
+    background: url('https://i0.wp.com/www.bebidaexpressblog.com.br/wp-content/uploads/2013/11/mussum1.png') center / cover;
+}
+
+.mdl-card__menu {
+    color: #FFF;
+}
+
+.container-menu {
+    position: relative;
+    width: 200px;
+    display: inline-block; /*Um do lado do outro*/
+    margin: 5px;
+    vertical-align: top;
+}
+
+.bg-tabela {
+    background-color: #000;
+}
+
+.bg-menu {
+    background-color: #CCC;
+    height: 150px;
+    width: 100%;
+}
+
+.bar-menu-right, .bar-menu-left {
+    box-sizing: border-box;
+    background: #3F5185;
+    color: #FFF;
+    width: 100%;
+    padding: 16px;
+}
+
+.bar-menu-right {
+    text-align: right;
+}
+
+.bar-menu-left {
+    text-align: left;
+}
+
+.global-nav {
+    background-color: transparent !important;
+    border-bottom: 4px solid transparent;
+}
+
+.global-nav:hover {
+    border-bottom: 4px solid rgb(255,171,64);
+}
+
+#pesquisa {
+    border-bottom: 1px solid rgb(255,171,64);
+}
